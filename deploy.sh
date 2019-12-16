@@ -10,5 +10,5 @@ docker push simplygwee/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=simplygwee/multi-server:$SHA
-kubectl set image deployments/client-deployment server=simplygwee/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=simplygwee/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=simplygwee/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=simplygwee/multi-worker:$SHA
